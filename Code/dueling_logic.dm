@@ -72,6 +72,12 @@
     var/mob/owner
     var/list/obj/card/cards = list()
     var/obj/duel_deck_display/deck_display
+    var/obj/duel/zone/deck/deck_zone  // Reference to the physical deck zone
+
+    proc/link_to_zone(obj/duel/zone/deck/DZ)
+        deck_zone = DZ
+        DZ.linked_deck = src
+        DZ.update_appearance()
 
     New(mob/O)
         owner = O
@@ -119,21 +125,6 @@
             
         owner << "Your deck has been shuffled ([cards.len] cards)."
 
-    // ----- Display Management -----
-    proc/position_deck_display()
-        if(!usr.client)
-            return
-            
-        if(!deck_display)
-            deck_display = new()
-            deck_display.owner = owner
-            deck_display.icon_state = "back"
-            
-        deck_display.screen_loc = "3,8"
-        deck_display.layer = 20
-        deck_display.plane = 1
-        deck_display.icon_state = "back"
-        usr.client.screen += deck_display
 
 // ==========================================
 // MOB FUNCTIONALITY
@@ -156,7 +147,12 @@
         hand += drawn_card
         update_hand_display()
         src << "You drew [drawn_card.name]!"
-        
+
+
+        if(duel_main_deck.deck_zone)
+        duel_main_deck.deck_zone.update_appearance()
+
+
         if(!duel_main_deck.cards.len)
             duel_main_deck.deck_display.icon_state = "empty"
 
@@ -196,7 +192,6 @@
         usr << "Error: No duel deck exists after sync"
         return
         
-    duel_main_deck.position_deck_display()
     clear_duel_field()
     create_duel_field()
     shuffle_deck()
