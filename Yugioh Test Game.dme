@@ -1,0 +1,76 @@
+// DM Environment file for Test Game.dme.
+// All manual changes should be made outside the BEGIN_ and END_ blocks.
+// New source code should be placed in .dm files: choose File/New --> Code File.
+
+// BEGIN_INTERNALS
+// END_INTERNALS
+
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+#define FILE_DIR "frames"
+#define FILE_DIR "Icons"
+#define FILE_DIR "Icons/HUD"
+#define FILE_DIR "Icons/Icons"
+#define FILE_DIR "Icons/Icons/Areas"
+#define FILE_DIR "Icons/Icons/Base and NPCs"
+#define FILE_DIR "Icons/Icons/Creatures"
+#define FILE_DIR "Icons/Icons/Indicators"
+#define FILE_DIR "Icons/Icons/Items"
+#define FILE_DIR "Icons/Icons/Items/Gene Splicing"
+#define FILE_DIR "Icons/Icons/Objects"
+#define FILE_DIR "Icons/Icons/Objects/A bunch of trees"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons/Elves"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons/Elves/Female Versions"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons/Elves/Male Versions"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons/Hairs"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons/Hairs/Elf"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons/Hairs/Human"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons/Hairs/Orc"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons/Hairs/Varkarian"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons/Humans"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons/Humans/Female Versions"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons/Humans/Male Versions"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons/Orcs"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons/Orcs/Female Versions"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons/Orcs/Male Versions"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons/RacesButtons"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons/Turfs"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons/Varkarian"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons/Varkarian/Female Versions"
+#define FILE_DIR "Icons/Icons/Plapwipe Icons/Varkarian/Male Versions"
+#define FILE_DIR "Icons/Icons/Tilesets"
+#define FILE_DIR "Icons/Icons/Turfs"
+#define FILE_DIR "YGO Assets"
+// END_FILE_DIR
+
+// BEGIN_PREFERENCES
+// END_PREFERENCES
+
+// BEGIN_INCLUDE
+#include "world.dm"
+#include "Character Creation Map.dmm"
+#include "map.dmm"
+#include "backup\map.dmm"
+#include "Code\area.dm"
+#include "Code\card_data.dm"
+#include "Code\cardInventoryGrid.dm"
+#include "Code\cardzones.dm"
+#include "Code\communication.dm"
+#include "Code\creation.dm"
+#include "Code\duel_card_procs.dm"
+#include "Code\dueling_logic.dm"
+#include "Code\logging.dm"
+#include "Code\loginscreen.dm"
+#include "Code\mob.dm"
+#include "Code\movement.dm"
+#include "Code\obj.dm"
+#include "Code\perks.dm"
+#include "Code\playerStatsTestNew.dm"
+#include "Code\racebuttons.dm"
+#include "Code\savefiles.dm"
+#include "Code\turf.dm"
+#include "Code\zoom.dm"
+#include "Interface\skin.dmf"
+// END_INCLUDE
+

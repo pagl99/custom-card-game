@@ -1,0 +1,29 @@
+"a" = (/turf,/area)
+"b" = (/turf/Carpet/Carpet_Center,/area)
+"c" = (/turf/CreationFloor/Carpet_Center,/area)
+
+(1,1,1) = {"
+bbbbbbcccc
+bbbbbbcccc
+bbbbbbcccc
+bbbbbbcccc
+bbbbbbbbbb
+bbbbbbbbbb
+ccccbbbbbb
+ccccbbbbbb
+ccccbbbbbb
+ccccbbbbbb
+"}
+
+(1,1,2) = {"
+aaaaaaaaaa
+aaaaaaaaaa
+aaaaaaaaaa
+aaaaaaaaaa
+aaaaaaaaaa
+aaaaaaaaaa
+aaaaaaaaaa
+aaaaaaaaaa
+aaaaaaaaaa
+aaaaaaaaaa
+"}

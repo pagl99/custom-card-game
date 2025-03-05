@@ -1,0 +1,3649 @@
+macro "macro"
+	elem 
+		name = "Center+REP"
+		command = ".center"
+	elem 
+		name = "Northeast+REP"
+		command = ".northeast"
+	elem 
+		name = "Southeast+REP"
+		command = ".southeast"
+	elem 
+		name = "Southwest+REP"
+		command = ".southwest"
+	elem 
+		name = "Northwest+REP"
+		command = ".northwest"
+	elem 
+		name = "CTRL+West"
+		command = "TurnWEST"
+	elem 
+		name = "West+REP"
+		command = ".west"
+	elem 
+		name = "CTRL+North"
+		command = "TurnNORTH"
+	elem 
+		name = "North+REP"
+		command = ".north"
+	elem 
+		name = "CTRL+East"
+		command = "TurnEAST"
+	elem 
+		name = "East+REP"
+		command = ".east"
+	elem 
+		name = "CTRL+South"
+		command = "TurnSOUTH"
+	elem 
+		name = "South+REP"
+		command = ".south"
+
+macro "macro1"
+	elem 
+		name = "CTRL+West"
+		command = ".TurnWEST"
+	elem 
+		name = "CTRL+North"
+		command = ".TurnNORTH"
+	elem 
+		name = "CTRL+East"
+		command = ".TurnEAST"
+	elem 
+		name = "CTRL+South"
+		command = ".TurnSOUTH"
+
+
+menu "menu"
+	elem 
+		name = "&File"
+		command = ""
+		saved-params = "is-checked"
+	elem 
+		name = "&Options and Messages...\tF1"
+		command = ".options"
+		category = "&File"
+		saved-params = "is-checked"
+	elem "Optionsmenu"
+		name = "&Game Options\tF3"
+		command = "Options"
+		category = "&File"
+		saved-params = "is-checked"
+	elem 
+		name = "Browse"
+		command = "<< browse"
+		category = "&File"
+		group = "browse"
+		saved-params = "is-checked"
+	elem 
+		name = "&Quit"
+		command = ".quit"
+		category = "&File"
+		saved-params = "is-checked"
+	elem 
+		name = "Icons"
+		command = ""
+		saved-params = "is-checked"
+	elem "stretch"
+		name = "&Stretch to fit"
+		command = ".winset \"default.map.icon-size=0\""
+		category = "Icons"
+		is-checked = true
+		can-check = true
+		group = "size"
+		saved-params = "is-checked"
+	elem "icon64"
+		name = "&64x64"
+		command = ".winset \"World.map.icon-size=64\""
+		category = "Icons"
+		can-check = true
+		group = "size"
+		saved-params = "is-checked"
+	elem "icon32"
+		name = "&32x32"
+		command = ".winset \"World.map.icon-size=32\""
+		category = "Icons"
+		can-check = true
+		group = "size"
+		saved-params = "is-checked"
+	elem "icon16"
+		name = "&16x16"
+		command = ".winset \"World.map.icon-size=16\""
+		category = "Icons"
+		can-check = true
+		group = "size"
+		saved-params = "is-checked"
+	elem 
+		name = ""
+		command = ""
+		category = "Icons"
+		saved-params = "is-checked"
+	elem "textmode"
+		name = "&Text"
+		command = ".winset \"menu.textmode.is-checked=true?default.map.text-mode=true:World.map.text-mode=false\""
+		category = "Icons"
+		can-check = true
+		saved-params = "is-checked"
+	elem 
+		name = "IC Options"
+		command = ""
+		saved-params = "is-checked"
+	elem 
+		name = "RP Train"
+		command = "RP-Train"
+		category = "IC Options"
+		saved-params = "is-checked"
+	elem 
+		name = "View RP Log"
+		command = "View-Own-RP-Log"
+		category = "IC Options"
+		saved-params = "is-checked"
+	elem 
+		name = "Spend RPP"
+		command = "Spend-RPP"
+		category = "IC Options"
+		saved-params = "is-checked"
+	elem 
+		name = "Custom Clan Application"
+		command = "Apply-for-Custom-Clan"
+		category = "IC Options"
+		saved-params = "is-checked"
+	elem 
+		name = "Custom Jutsu Application"
+		command = "Apply-For-Custom-Jutsu"
+		category = "IC Options"
+		saved-params = "is-checked"
+
+
+window "Login"
+	elem "Login"
+		type = MAIN
+		pos = 291,0
+		size = 950x721
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "We're out here fucking PLAPPING and shit."
+		statusbar = false
+		can-resize = false
+	elem "TITLE"
+		type = LABEL
+		pos = 96,144
+		size = 744x152
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		font-family = "Comic Sans MS"
+		font-size = 50
+		background-color = #ff0000
+		is-transparent = true
+		saved-params = ""
+		text = "WORLD OF PLAP"
+	elem "New"
+		type = BUTTON
+		pos = 600,536
+		size = 240x76
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		font-family = "Comic Sans MS,@Kozuka Mincho Pro R"
+		font-size = 30
+		text-color = #0099cc
+		background-color = #33cc33
+		saved-params = "is-checked"
+		text = "Login"
+		command = "LoadGame"
+	elem "loginbutton"
+		type = BUTTON
+		pos = 104,536
+		size = 240x76
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		font-family = "Comic Sans MS"
+		font-size = 30
+		background-color = #ff3300
+		saved-params = "is-checked"
+		text = "NEW"
+		command = "NewGame"
+
+window "MediPot"
+	elem "MediPot"
+		type = MAIN
+		pos = 281,0
+		size = 651x169
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-visible = false
+		border = sunken
+		saved-params = "pos;size;is-minimized;is-maximized"
+		statusbar = false
+		can-minimize = false
+		can-resize = false
+	elem "button17"
+		type = BUTTON
+		pos = 256,96
+		size = 168x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Cold and Flu"
+		command = "ColdFlu-Make"
+	elem "button15"
+		type = BUTTON
+		pos = 472,68
+		size = 168x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Antidote"
+		command = "Antidote-Make"
+	elem "bar6"
+		type = BAR
+		pos = 444,40
+		size = 12x104
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		bar-color = #000000
+		is-slider = false
+		dir = north
+		value = 100
+	elem "button14"
+		type = BUTTON
+		pos = 256,120
+		size = 168x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-visible = false
+		border = sunken
+		saved-params = "is-checked"
+		text = "Soldier Pill"
+		command = ""
+	elem "button13"
+		type = BUTTON
+		pos = 472,96
+		size = 168x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Akimichi Pills"
+		command = "Akimichi-Make"
+	elem "button12"
+		type = BUTTON
+		pos = 256,68
+		size = 168x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Healing Pill"
+		command = "HP-Make"
+	elem "button3"
+		type = BUTTON
+		pos = 472,40
+		size = 168x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Poison"
+		command = "Poison-Make"
+	elem "label1"
+		type = LABEL
+		pos = 16,8
+		size = 216x24
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = #646464
+		saved-params = ""
+		text = "Medic Pot"
+	elem "button1"
+		type = BUTTON
+		pos = 256,40
+		size = 168x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Chakra Borne Illness"
+		command = ""
+	elem "bar5"
+		type = BAR
+		pos = 16,40
+		size = 216x8
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		bar-color = #000000
+		is-slider = false
+		dir = east
+		value = 100
+	elem "bar1"
+		type = BAR
+		pos = 80,48
+		size = 12x112
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		bar-color = #000000
+		is-slider = false
+		dir = north
+		value = 100
+	elem "bar2"
+		type = BAR
+		pos = 156,48
+		size = 12x112
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		bar-color = #000000
+		is-slider = false
+		dir = north
+		value = 100
+	elem "bar3"
+		type = BAR
+		pos = 16,96
+		size = 216x8
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		bar-color = #000000
+		is-slider = false
+		dir = east
+		value = 100
+	elem "bar4"
+		type = BAR
+		pos = 16,152
+		size = 216x8
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		bar-color = #000000
+		is-slider = false
+		dir = east
+		value = 100
+	elem "BR"
+		type = GRID
+		pos = 168,104
+		size = 64x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		highlight-color = #000000
+		is-list = true
+	elem "BC"
+		type = GRID
+		pos = 88,104
+		size = 72x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		highlight-color = #000000
+		is-list = true
+	elem "BL"
+		type = GRID
+		pos = 16,104
+		size = 64x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		highlight-color = #000000
+		is-list = true
+	elem "TR"
+		type = GRID
+		pos = 168,48
+		size = 64x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		highlight-color = #000000
+		is-list = true
+	elem "TC"
+		type = GRID
+		pos = 88,48
+		size = 72x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		highlight-color = #000000
+		is-list = true
+	elem "TL"
+		type = GRID
+		pos = 16,48
+		size = 64x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		highlight-color = #000000
+		is-list = true
+	elem "label13"
+		type = LABEL
+		pos = 256,8
+		size = 384x24
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = #646464
+		saved-params = ""
+		text = "Medicine Recipes"
+
+window "Medicine Book"
+	elem "Medicine Book"
+		type = MAIN
+		pos = 281,0
+		size = 651x169
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-visible = false
+		border = sunken
+		saved-params = "pos;size;is-minimized;is-maximized"
+		statusbar = false
+		can-minimize = false
+		can-resize = false
+	elem "button17"
+		type = BUTTON
+		pos = 256,96
+		size = 168x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Cold and Flu"
+		command = "CAFRecipe"
+	elem "button15"
+		type = BUTTON
+		pos = 472,68
+		size = 168x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Antidote"
+		command = "AntiRecipe"
+	elem "bar6"
+		type = BAR
+		pos = 444,40
+		size = 12x104
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		bar-color = #000000
+		is-slider = false
+		dir = north
+		value = 100
+	elem "button14"
+		type = BUTTON
+		pos = 256,124
+		size = 168x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-visible = false
+		border = sunken
+		saved-params = "is-checked"
+		text = "Soldier Pill"
+		command = ""
+	elem "button13"
+		type = BUTTON
+		pos = 472,96
+		size = 168x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Akimichi Pills"
+		command = "AkiPills"
+	elem "button12"
+		type = BUTTON
+		pos = 256,68
+		size = 168x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Healing Pill"
+		command = "HealingRecipe"
+	elem "button3"
+		type = BUTTON
+		pos = 472,40
+		size = 168x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Poison"
+		command = "PoisonRecipe"
+	elem "Name"
+		type = LABEL
+		pos = 16,8
+		size = 216x24
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = #646464
+		saved-params = ""
+		text = "Medicine Book"
+	elem "button1"
+		type = BUTTON
+		pos = 256,40
+		size = 168x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Chakra Borne Illness"
+		command = ""
+	elem "bar5"
+		type = BAR
+		pos = 16,40
+		size = 216x8
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		bar-color = #000000
+		is-slider = false
+		dir = east
+		value = 100
+	elem "bar1"
+		type = BAR
+		pos = 80,48
+		size = 12x112
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		bar-color = #000000
+		is-slider = false
+		dir = north
+		value = 100
+	elem "bar2"
+		type = BAR
+		pos = 156,48
+		size = 12x112
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		bar-color = #000000
+		is-slider = false
+		dir = north
+		value = 100
+	elem "bar3"
+		type = BAR
+		pos = 16,96
+		size = 216x8
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		bar-color = #000000
+		is-slider = false
+		dir = east
+		value = 100
+	elem "bar4"
+		type = BAR
+		pos = 16,152
+		size = 216x8
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		bar-color = #000000
+		is-slider = false
+		dir = east
+		value = 100
+	elem "BR"
+		type = GRID
+		pos = 168,104
+		size = 64x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		highlight-color = #000000
+		is-list = true
+	elem "BC"
+		type = GRID
+		pos = 88,104
+		size = 72x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		highlight-color = #000000
+		is-list = true
+	elem "BL"
+		type = GRID
+		pos = 16,104
+		size = 64x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		highlight-color = #000000
+		is-list = true
+	elem "TR"
+		type = GRID
+		pos = 168,48
+		size = 64x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		highlight-color = #000000
+		is-list = true
+	elem "TC"
+		type = GRID
+		pos = 88,48
+		size = 72x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		highlight-color = #000000
+		is-list = true
+	elem "TL"
+		type = GRID
+		pos = 16,48
+		size = 64x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		highlight-color = #000000
+		is-list = true
+	elem "label13"
+		type = LABEL
+		pos = 256,8
+		size = 384x24
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = #646464
+		saved-params = ""
+		text = "Medicine Recipes"
+
+window "Preview"
+	elem "Preview"
+		type = MAIN
+		pos = 281,0
+		size = 301x387
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+		statusbar = false
+		can-minimize = false
+		can-resize = false
+	elem "label11"
+		type = LABEL
+		pos = 0,0
+		size = 301x387
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = #400040
+		saved-params = ""
+		text = ""
+	elem "Mastery"
+		type = LABEL
+		pos = 16,356
+		size = 123x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "EXP"
+		type = LABEL
+		pos = 165,356
+		size = 123x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "Type"
+		type = LABEL
+		pos = 165,328
+		size = 123x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "Drain"
+		type = LABEL
+		pos = 16,328
+		size = 123x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "Description"
+		type = LABEL
+		pos = 16,184
+		size = 272x136
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		text = ""
+		text-wrap = true
+	elem "Icon"
+		type = LABEL
+		pos = 12,41
+		size = 276x135
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = #ff0000
+		border = line
+		saved-params = ""
+		text = ""
+		image-mode = stretch
+	elem "Name"
+		type = LABEL
+		pos = 10,9
+		size = 278x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = line
+		saved-params = ""
+		text = ""
+
+window "RPLog"
+	elem "RPLog"
+		type = MAIN
+		pos = 281,0
+		size = 416x320
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+		statusbar = false
+		can-close = false
+		can-resize = false
+	elem "Tit"
+		type = INPUT
+		pos = 60,20
+		size = 356x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		no-command = true
+	elem "label4"
+		type = LABEL
+		pos = 0,20
+		size = 60x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		text = "Title"
+		text-wrap = true
+	elem "button2"
+		type = BUTTON
+		pos = 0,296
+		size = 416x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Submit RP"
+		command = ".LoggieClose"
+	elem "label3"
+		type = LABEL
+		pos = 0,0
+		size = 416x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		text = "Enter your RP Below:"
+	elem "Inp"
+		type = INPUT
+		pos = 0,40
+		size = 416x256
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		command = ".Loggien"
+		multi-line = true
+
+window "Forge"
+	elem "Forge"
+		type = MAIN
+		pos = 291,0
+		size = 487x528
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-visible = false
+		border = sunken
+		saved-params = "pos;size;is-minimized;is-maximized"
+		can-resize = false
+	elem "Foga"
+		type = LABEL
+		pos = 0,-4
+		size = 487x532
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		drop-zone = true
+		saved-params = ""
+		text = ""
+
+window "Bane"
+	elem "Bane"
+		type = MAIN
+		pos = 281,0
+		size = 320x320
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-visible = false
+		border = sunken
+		saved-params = "pos;size;is-minimized;is-maximized"
+		can-minimize = false
+		can-resize = false
+	elem "button129"
+		type = BUTTON
+		pos = 288,288
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button128"
+		type = BUTTON
+		pos = 256,288
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button127"
+		type = BUTTON
+		pos = 224,288
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button126"
+		type = BUTTON
+		pos = 192,288
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button125"
+		type = BUTTON
+		pos = 160,288
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button124"
+		type = BUTTON
+		pos = 128,288
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button123"
+		type = BUTTON
+		pos = 96,288
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button122"
+		type = BUTTON
+		pos = 64,288
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button121"
+		type = BUTTON
+		pos = 32,288
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button120"
+		type = BUTTON
+		pos = 0,288
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button119"
+		type = BUTTON
+		pos = 288,256
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button118"
+		type = BUTTON
+		pos = 256,256
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button117"
+		type = BUTTON
+		pos = 224,256
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button116"
+		type = BUTTON
+		pos = 192,256
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button115"
+		type = BUTTON
+		pos = 160,256
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button114"
+		type = BUTTON
+		pos = 128,256
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button113"
+		type = BUTTON
+		pos = 96,256
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button112"
+		type = BUTTON
+		pos = 64,256
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button111"
+		type = BUTTON
+		pos = 32,256
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button110"
+		type = BUTTON
+		pos = 0,256
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button109"
+		type = BUTTON
+		pos = 288,224
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button108"
+		type = BUTTON
+		pos = 256,224
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button107"
+		type = BUTTON
+		pos = 224,224
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button106"
+		type = BUTTON
+		pos = 192,224
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button105"
+		type = BUTTON
+		pos = 160,224
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button104"
+		type = BUTTON
+		pos = 128,224
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button103"
+		type = BUTTON
+		pos = 96,224
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button102"
+		type = BUTTON
+		pos = 64,224
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button101"
+		type = BUTTON
+		pos = 32,224
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button100"
+		type = BUTTON
+		pos = 0,224
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button99"
+		type = BUTTON
+		pos = 288,192
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button98"
+		type = BUTTON
+		pos = 256,192
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button97"
+		type = BUTTON
+		pos = 224,192
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button96"
+		type = BUTTON
+		pos = 192,192
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button95"
+		type = BUTTON
+		pos = 160,192
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button94"
+		type = BUTTON
+		pos = 128,192
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button93"
+		type = BUTTON
+		pos = 96,192
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button92"
+		type = BUTTON
+		pos = 64,192
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button91"
+		type = BUTTON
+		pos = 32,192
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button90"
+		type = BUTTON
+		pos = 0,192
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button89"
+		type = BUTTON
+		pos = 288,160
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button88"
+		type = BUTTON
+		pos = 256,160
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button87"
+		type = BUTTON
+		pos = 224,160
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button86"
+		type = BUTTON
+		pos = 192,160
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button85"
+		type = BUTTON
+		pos = 160,160
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button84"
+		type = BUTTON
+		pos = 128,160
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button83"
+		type = BUTTON
+		pos = 96,160
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button82"
+		type = BUTTON
+		pos = 64,160
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button81"
+		type = BUTTON
+		pos = 32,160
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button80"
+		type = BUTTON
+		pos = 0,160
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button79"
+		type = BUTTON
+		pos = 288,128
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button78"
+		type = BUTTON
+		pos = 256,128
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button77"
+		type = BUTTON
+		pos = 224,128
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button76"
+		type = BUTTON
+		pos = 192,128
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button75"
+		type = BUTTON
+		pos = 160,128
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button74"
+		type = BUTTON
+		pos = 128,128
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button73"
+		type = BUTTON
+		pos = 96,128
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button72"
+		type = BUTTON
+		pos = 64,128
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button71"
+		type = BUTTON
+		pos = 32,128
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button70"
+		type = BUTTON
+		pos = 0,128
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button69"
+		type = BUTTON
+		pos = 288,96
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button68"
+		type = BUTTON
+		pos = 256,96
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button67"
+		type = BUTTON
+		pos = 224,96
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button66"
+		type = BUTTON
+		pos = 192,96
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button65"
+		type = BUTTON
+		pos = 160,96
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button64"
+		type = BUTTON
+		pos = 128,96
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button63"
+		type = BUTTON
+		pos = 96,96
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button62"
+		type = BUTTON
+		pos = 64,96
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button61"
+		type = BUTTON
+		pos = 32,96
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button60"
+		type = BUTTON
+		pos = 0,96
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button59"
+		type = BUTTON
+		pos = 288,64
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button58"
+		type = BUTTON
+		pos = 256,64
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button57"
+		type = BUTTON
+		pos = 224,64
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button56"
+		type = BUTTON
+		pos = 192,64
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button55"
+		type = BUTTON
+		pos = 160,64
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button54"
+		type = BUTTON
+		pos = 128,64
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button53"
+		type = BUTTON
+		pos = 96,64
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button52"
+		type = BUTTON
+		pos = 64,64
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button51"
+		type = BUTTON
+		pos = 32,64
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button50"
+		type = BUTTON
+		pos = 0,64
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button49"
+		type = BUTTON
+		pos = 288,32
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button48"
+		type = BUTTON
+		pos = 256,32
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button47"
+		type = BUTTON
+		pos = 224,32
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button46"
+		type = BUTTON
+		pos = 192,32
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button45"
+		type = BUTTON
+		pos = 160,32
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button44"
+		type = BUTTON
+		pos = 128,32
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button43"
+		type = BUTTON
+		pos = 96,32
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button42"
+		type = BUTTON
+		pos = 64,32
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button41"
+		type = BUTTON
+		pos = 32,32
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button40"
+		type = BUTTON
+		pos = 0,32
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button39"
+		type = BUTTON
+		pos = 288,0
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button38"
+		type = BUTTON
+		pos = 256,0
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button37"
+		type = BUTTON
+		pos = 224,0
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button36"
+		type = BUTTON
+		pos = 192,0
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button35"
+		type = BUTTON
+		pos = 160,0
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button34"
+		type = BUTTON
+		pos = 128,0
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button33"
+		type = BUTTON
+		pos = 96,0
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button32"
+		type = BUTTON
+		pos = 64,0
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button31"
+		type = BUTTON
+		pos = 32,0
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+	elem "button30"
+		type = BUTTON
+		pos = 0,0
+		size = 32x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		image = 'Crafting System\\Weapon Smith\\Mining\\Dirt.dmi'
+		command = ".Minen"
+
+window "Stove"
+	elem "Stove"
+		type = MAIN
+		pos = 281,0
+		size = 456x372
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+		statusbar = false
+		can-minimize = false
+		can-resize = false
+		image = 'Food Making\\Stove.png'
+	elem "Fridge2"
+		type = GRID
+		pos = 370,11
+		size = 63x52
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-names = false
+		is-list = true
+	elem "button29"
+		type = BUTTON
+		pos = 128,8
+		size = 88x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Cook Bacon"
+		command = "BaconCook"
+	elem "button28"
+		type = BUTTON
+		pos = 64,68
+		size = 88x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Fry Big Fish"
+		command = "BigFishFry"
+	elem "button26"
+		type = BUTTON
+		pos = 128,36
+		size = 88x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Fry Medium Fish"
+		command = "MediumFishFry"
+	elem "button25"
+		type = BUTTON
+		pos = 8,36
+		size = 88x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Fry Small Fish"
+		command = "SmallFishFry"
+	elem "button24"
+		type = BUTTON
+		pos = 136,272
+		size = 88x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Cook Baked Potato"
+		command = "BakedPotatoCook"
+	elem "button23"
+		type = BUTTON
+		pos = 0,272
+		size = 88x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Cook French Fries"
+		command = "FrenchFryCook"
+	elem "button22"
+		type = BUTTON
+		pos = 136,312
+		size = 88x36
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Bacon Cheeseburger"
+		command = "BaconCheeseBurgerCook"
+	elem "button21"
+		type = BUTTON
+		pos = 0,312
+		size = 88x36
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Cook Cheeseburger"
+		command = "CheeseBurgerCook"
+	elem "button20"
+		type = BUTTON
+		pos = 72,244
+		size = 88x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Cook Hamburger"
+		command = "HamburgerCook"
+	elem "button19"
+		type = BUTTON
+		pos = 8,8
+		size = 88x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Cook Beef Patty"
+		command = "PattyCook"
+	elem "button18"
+		type = BUTTON
+		pos = 234,104
+		size = 216x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = "is-checked"
+		text = "Store In Fridge"
+		command = "Store-In-Fridge"
+	elem "Fridge"
+		type = GRID
+		pos = 248,11
+		size = 64x52
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-names = false
+		is-list = true
+
+window "Vending"
+	elem "Vending"
+		type = MAIN
+		pos = 291,34
+		size = 424x516
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+		titlebar = false
+		statusbar = false
+		can-minimize = false
+		can-resize = false
+		keep-aspect = true
+	elem "button141"
+		type = BUTTON
+		pos = 256,400
+		size = 57x28
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = "Buy Red Drank"
+		command = "VendRedDrank"
+	elem "button140"
+		type = BUTTON
+		pos = 252,330
+		size = 60x44
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = "Buy Honey Bun"
+		command = "VendBun"
+	elem "button137"
+		type = BUTTON
+		pos = 250,263
+		size = 63x44
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = "Buy Chocolate Bar"
+		command = "VendChoco"
+	elem "button136"
+		type = BUTTON
+		pos = 253,158
+		size = 60x80
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = "Buy Orange Juice"
+		command = "VendOJ"
+	elem "button135"
+		type = BUTTON
+		pos = 253,88
+		size = 60x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = "Buy Milk"
+		command = "VendMilk"
+	elem "button134"
+		type = BUTTON
+		pos = 88,400
+		size = 60x28
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = "Buy Cookie"
+		command = "VendCookie"
+	elem "button133"
+		type = BUTTON
+		pos = 85,331
+		size = 60x44
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = "Buy Chips"
+		command = "VendChips"
+	elem "button132"
+		type = BUTTON
+		pos = 85,262
+		size = 60x44
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = "Buy Purple Drank"
+		command = "VendPurpleDrank"
+	elem "button131"
+		type = BUTTON
+		pos = 85,157
+		size = 60x80
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = "Buy Water"
+		command = "VendWater"
+	elem "button130"
+		type = BUTTON
+		pos = 84,88
+		size = 60x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = "Buy Soda"
+		command = "VendSoda"
+
+window "Versus"
+	elem "Versus"
+		type = MAIN
+		pos = 281,0
+		size = 482x366
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+		statusbar = false
+		can-resize = false
+	elem "label76"
+		type = LABEL
+		pos = 296,344
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "label75"
+		type = LABEL
+		pos = 296,320
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "label74"
+		type = LABEL
+		pos = 296,296
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "label73"
+		type = LABEL
+		pos = 296,272
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "label72"
+		type = LABEL
+		pos = 296,248
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "label71"
+		type = LABEL
+		pos = 296,224
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "Ref2"
+		type = LABEL
+		pos = 296,200
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "Con2"
+		type = LABEL
+		pos = 296,176
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "Int2"
+		type = LABEL
+		pos = 296,152
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "Gen2"
+		type = LABEL
+		pos = 296,128
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "Tai2"
+		type = LABEL
+		pos = 296,104
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "Nin2"
+		type = LABEL
+		pos = 296,80
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "Stamina2"
+		type = LABEL
+		pos = 296,56
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "Chakra 2"
+		type = LABEL
+		pos = 296,32
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "label62"
+		type = LABEL
+		pos = 96,344
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "label61"
+		type = LABEL
+		pos = 96,320
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "label60"
+		type = LABEL
+		pos = 96,296
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "label59"
+		type = LABEL
+		pos = 96,272
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "label58"
+		type = LABEL
+		pos = 96,248
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "label57"
+		type = LABEL
+		pos = 96,224
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "Ref1"
+		type = LABEL
+		pos = 96,200
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "Con1"
+		type = LABEL
+		pos = 96,176
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "Int1"
+		type = LABEL
+		pos = 96,152
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "Gen1"
+		type = LABEL
+		pos = 96,128
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "Tai1"
+		type = LABEL
+		pos = 96,104
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "Nin1"
+		type = LABEL
+		pos = 96,80
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "Stamina1"
+		type = LABEL
+		pos = 96,56
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "Chakra1"
+		type = LABEL
+		pos = 96,32
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		text = ""
+	elem "label48"
+		type = LABEL
+		pos = 384,344
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Ninjutsu Resist"
+	elem "label47"
+		type = LABEL
+		pos = 384,320
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Genjutsu Resist"
+	elem "label46"
+		type = LABEL
+		pos = 384,296
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Attack Speed"
+	elem "label45"
+		type = LABEL
+		pos = 384,272
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Durability"
+	elem "label44"
+		type = LABEL
+		pos = 384,248
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Strength"
+	elem "label43"
+		type = LABEL
+		pos = 384,224
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Speed"
+	elem "label42"
+		type = LABEL
+		pos = 384,200
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Reflex"
+	elem "label41"
+		type = LABEL
+		pos = 384,176
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Control"
+	elem "label40"
+		type = LABEL
+		pos = 384,152
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Intelligence"
+	elem "label39"
+		type = LABEL
+		pos = 384,128
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Genjutsu"
+	elem "label38"
+		type = LABEL
+		pos = 384,104
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Taijutsu"
+	elem "label37"
+		type = LABEL
+		pos = 384,80
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Ninjutsu"
+	elem "label36"
+		type = LABEL
+		pos = 384,56
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Stamina"
+	elem "label35"
+		type = LABEL
+		pos = 384,32
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Chakra"
+	elem "label34"
+		type = LABEL
+		pos = 8,344
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Ninjutsu Resist"
+	elem "label33"
+		type = LABEL
+		pos = 8,320
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Genjutsu Resist"
+	elem "label32"
+		type = LABEL
+		pos = 8,296
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Attack Speed"
+	elem "label31"
+		type = LABEL
+		pos = 8,272
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Durability"
+	elem "label30"
+		type = LABEL
+		pos = 8,248
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Strength"
+	elem "label29"
+		type = LABEL
+		pos = 8,224
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Speed"
+	elem "label28"
+		type = LABEL
+		pos = 8,200
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Reflex"
+	elem "label20"
+		type = LABEL
+		pos = 8,176
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Control"
+	elem "label19"
+		type = LABEL
+		pos = 8,152
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Intelligence"
+	elem "label18"
+		type = LABEL
+		pos = 8,128
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Genjutsu"
+	elem "label17"
+		type = LABEL
+		pos = 8,104
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Taijutsu"
+	elem "label16"
+		type = LABEL
+		pos = 8,80
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Ninjutsu"
+	elem "label15"
+		type = LABEL
+		pos = 8,56
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Stamina"
+	elem "label14"
+		type = LABEL
+		pos = 8,32
+		size = 88x16
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ff0000
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = "Chakra"
+	elem "label12"
+		type = LABEL
+		pos = 8,4
+		size = 464x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ffffff
+		background-color = #000000
+		saved-params = ""
+		text = ""
+
+window "World"
+	elem "World"
+		type = MAIN
+		pos = 291,0
+		size = 640x479
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-default = true
+		saved-params = "pos;size;is-minimized;is-maximized"
+		macro = "macro"
+		menu = "menu"
+	elem "label66"
+		type = LABEL
+		pos = 0,0
+		size = 640x480
+		anchor1 = 0,0
+		anchor2 = 100,100
+		background-color = #2e2e2e
+		border = line
+		saved-params = ""
+		text = ""
+		keep-aspect = true
+	elem "input4"
+		type = INPUT
+		pos = 480,432
+		size = 152x16
+		anchor1 = 75,90
+		anchor2 = 99,94
+		text-color = #ffffff
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		command = "Roleplay"
+		multi-line = true
+	elem "input2"
+		type = INPUT
+		pos = 480,416
+		size = 152x16
+		anchor1 = 75,87
+		anchor2 = 99,90
+		text-color = #ffffff
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		command = "Say"
+	elem "input1"
+		type = INPUT
+		pos = 480,400
+		size = 152x16
+		anchor1 = 75,84
+		anchor2 = 99,87
+		text-color = #ffffff
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		command = "OOC"
+	elem "button11"
+		type = BUTTON
+		pos = 416,452
+		size = 216x20
+		anchor1 = 65,94
+		anchor2 = 99,99
+		text-color = #ffffff
+		background-color = #800000
+		border = sunken
+		saved-params = "is-checked"
+		text = "Admin Help"
+		command = "Admin-Help"
+	elem "input5"
+		type = INPUT
+		pos = 8,464
+		size = 400x16
+		anchor1 = 1,97
+		anchor2 = 64,100
+		text-color = #ffffff
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+	elem "bar7"
+		type = BAR
+		pos = 424,294
+		size = 100x10
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		is-slider = false
+		dir = east
+	elem "button10"
+		type = BUTTON
+		pos = 416,432
+		size = 64x16
+		anchor1 = 65,90
+		anchor2 = 75,94
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		saved-params = "is-checked"
+		text = "Roleplay"
+		command = "Roleplay"
+	elem "button9"
+		type = BUTTON
+		pos = 416,416
+		size = 64x16
+		anchor1 = 65,87
+		anchor2 = 75,90
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		saved-params = "is-checked"
+		text = "Say"
+		command = "Say"
+	elem "button8"
+		type = BUTTON
+		pos = 416,400
+		size = 64x16
+		anchor1 = 65,84
+		anchor2 = 75,87
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		saved-params = "is-checked"
+		text = "OOC"
+		command = "OOC"
+	elem "OOC"
+		type = OUTPUT
+		pos = 416,200
+		size = 216x192
+		anchor1 = 65,42
+		anchor2 = 99,82
+		font-family = "Tahoma,Corbel"
+		text-color = #ffffff
+		background-color = #000000
+		is-default = true
+		border = line
+		saved-params = "max-lines"
+	elem "Tabz"
+		type = INFO
+		pos = 416,8
+		size = 216x184
+		anchor1 = 65,2
+		anchor2 = 99,40
+		font-family = "Corbel,Microsoft JhengHei UI Light,Times New Roman,Lucida Fax,Default"
+		font-size = 8
+		text-color = #ffffff
+		background-color = #000000
+		is-default = true
+		border = line
+		saved-params = ""
+		tab-text-color = #ffffff
+		tab-background-color = #000000
+		tab-font-family = "Calibri,Lucida Fax"
+		prefix-color = #ffffff
+		suffix-color = #ffffff
+	elem "bar8"
+		type = BAR
+		pos = 136,296
+		size = 100x122
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		is-slider = false
+		dir = east
+	elem "ic"
+		type = OUTPUT
+		pos = 8,320
+		size = 400x136
+		anchor1 = 1,67
+		anchor2 = 64,95
+		font-family = "Corbel,Garamond"
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		saved-params = "max-lines"
+	elem "map"
+		type = MAP
+		pos = 8,0
+		size = 400x312
+		anchor1 = 1,0
+		anchor2 = 64,65
+		is-default = true
+		border = sunken
+		saved-params = "icon-size"
+		zoom = 1
+
+window "Crafting Book"
+	elem "Crafting Book"
+		type = MAIN
+		pos = 281,0
+		size = 280x218
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+		can-minimize = false
+		can-resize = false
+	elem "button139"
+		type = BUTTON
+		pos = 36,198
+		size = 60x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = "<--"
+		command = "Back-Book"
+	elem "button138"
+		type = BUTTON
+		pos = 180,198
+		size = 60x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = "-->"
+		command = "Check-Book"
+	elem "bar1"
+		type = BAR
+		pos = 96,32
+		size = 12x160
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		bar-color = #000000
+		is-slider = false
+		dir = north
+		value = 100
+	elem "bar2"
+		type = BAR
+		pos = 172,32
+		size = 12x160
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		bar-color = #000000
+		is-slider = false
+		dir = north
+		value = 100
+	elem "bar3"
+		type = BAR
+		pos = 32,80
+		size = 216x8
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		bar-color = #000000
+		is-slider = false
+		dir = east
+		value = 100
+	elem "bar4"
+		type = BAR
+		pos = 32,136
+		size = 216x8
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		bar-color = #000000
+		is-slider = false
+		dir = east
+		value = 100
+	elem "BR"
+		type = GRID
+		pos = 184,144
+		size = 64x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		is-list = true
+	elem "BC"
+		type = GRID
+		pos = 104,144
+		size = 72x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		is-list = true
+	elem "BL"
+		type = GRID
+		pos = 32,144
+		size = 64x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		is-list = true
+	elem "CR"
+		type = GRID
+		pos = 184,88
+		size = 64x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		is-list = true
+	elem "C"
+		type = GRID
+		pos = 104,88
+		size = 72x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		is-list = true
+	elem "CL"
+		type = GRID
+		pos = 32,88
+		size = 64x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		is-list = true
+	elem "TR"
+		type = GRID
+		pos = 184,32
+		size = 64x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		is-list = true
+	elem "TC"
+		type = GRID
+		pos = 104,32
+		size = 72x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		is-list = true
+	elem "TL"
+		type = GRID
+		pos = 32,32
+		size = 64x48
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		border = sunken
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		show-lines = none
+		show-names = false
+		is-list = true
+	elem "Name"
+		type = LABEL
+		pos = 0,0
+		size = 280x24
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = #646464
+		saved-params = ""
+		text = "Crafting Book"
+
+window "Cabinet"
+	elem "Cabinet"
+		type = MAIN
+		pos = 291,0
+		size = 288x471
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "Cabinent"
+		statusbar = false
+	elem "Grid"
+		type = GRID
+		pos = 8,8
+		size = 272x456
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		cells = 1x1
+		current-cell = 1,1
+		highlight-color = #000000
+
+window "characterCreationMain"
+	elem "characterCreationMain"
+		type = MAIN
+		pos = 291,0
+		size = 680x499
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = #5f5f5f
+		is-visible = false
+		is-transparent = true
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "Character Creation"
+		titlebar = false
+		statusbar = false
+		can-minimize = false
+		can-resize = false
+		image = 'Icons\\HUD\\HUD.png'
+	elem "creationInfo"
+		type = LABEL
+		pos = 424,88
+		size = 240x240
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		saved-params = ""
+		text = ""
+	elem "creationPreview"
+		type = MAP
+		pos = 24,64
+		size = 248x280
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		drop-zone = false
+		saved-params = "zoom;letterbox;zoom-mode"
+		letterbox = false
+	elem "race4Button"
+		type = BUTTON
+		pos = 232,424
+		size = 64x64
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		command = "SetRaceVark"
+	elem "race3Button"
+		type = BUTTON
+		pos = 160,424
+		size = 64x64
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		command = "SetRaceOrc"
+	elem "race1Button"
+		type = BUTTON
+		pos = 16,424
+		size = 64x64
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		command = "SetRaceElf"
+	elem "race2Button"
+		type = BUTTON
+		pos = 88,424
+		size = 64x64
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		command = "SetRaceHuman"
+		button-type = pushbox
+	elem "createCharacterButton"
+		type = BUTTON
+		pos = 536,448
+		size = 112x40
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "is-checked"
+		text = ""
+		command = "FinishCreation"
+	elem "iconRight"
+		type = BUTTON
+		pos = 176,360
+		size = 40x40
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		font-size = 8
+		saved-params = "is-checked"
+		text = ""
+		command = ""
+	elem "maleButton"
+		type = BUTTON
+		pos = 296,104
+		size = 40x40
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		font-size = 8
+		saved-params = "is-checked"
+		text = ""
+		command = "SetGenderMale"
+	elem "iconLeft"
+		type = BUTTON
+		pos = 88,360
+		size = 40x40
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		font-size = 8
+		saved-params = "is-checked"
+		text = ""
+		command = ""
+	elem "selectSubrace"
+		type = BUTTON
+		pos = 288,272
+		size = 112x40
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		font-size = 10
+		saved-params = "is-checked"
+		text = ""
+		command = ""
+	elem "selectBase"
+		type = BUTTON
+		pos = 288,216
+		size = 112x40
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		font-size = 10
+		saved-params = "is-checked"
+		text = ""
+		command = "SetBase"
+	elem "femaleButton"
+		type = BUTTON
+		pos = 352,104
+		size = 40x40
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		font-size = 8
+		saved-params = "is-checked"
+		text = ""
+		command = "SetGenderFemale"
+	elem "selectHair"
+		type = BUTTON
+		pos = 288,160
+		size = 112x40
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		font-size = 10
+		saved-params = "is-checked"
+		text = ""
+		command = "SelectHair"
+	elem "characterNameInput"
+		type = INPUT
+		pos = 292,48
+		size = 348x24
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		font-size = 10
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		saved-params = ""
+		no-command = true
+	elem "label67"
+		type = LABEL
+		pos = 288,8
+		size = 136x40
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		font-size = 30
+		is-transparent = true
+		saved-params = ""
+		text = "NAME:"
+
+window "collection"
+	elem "collection"
+		type = MAIN
+		pos = 291,0
+		size = 681x600
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = #00002a
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+		can-resize = false
+	elem "extradecklabel"
+		type = LABEL
+		pos = 460,10
+		size = 200x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		text = "Extra Deck"
+	elem "extradeckgrid"
+		type = GRID
+		pos = 460,30
+		size = 200x540
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		highlight-color = #000000
+	elem "decklabel"
+		type = LABEL
+		pos = 240,10
+		size = 200x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		text = "Deck"
+	elem "collectionlabel"
+		type = LABEL
+		pos = 20,10
+		size = 200x20
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		text = "Collection"
+	elem "deckgrid"
+		type = GRID
+		pos = 240,30
+		size = 200x540
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		highlight-color = #000000
+		is-list = true
+	elem "collectiongrid"
+		type = GRID
+		pos = 20,30
+		size = 200x540
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = ""
+		cells = 1x0
+		current-cell = 1,1
+		highlight-color = #000000
+		is-list = true
+
+window "card_info"
+	elem "card_info"
+		type = MAIN
+		pos = 291,0
+		size = 399x370
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+		statusbar = false
+		can-minimize = false
+		can-resize = false
+		outer-size = 415x409
+		outer-pos = 291,0
+		inner-size = 399x370
+		inner-pos = 8,31
+		screen-size = 1920x1032
+	elem "card_frame"
+		type = LABEL
+		pos = 0,0
+		size = 399x370
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		saved-params = ""
+		text = ""
+		image = 'frames\\fusion_monster.png'
+	elem "star12"
+		type = LABEL
+		pos = 10,70
+		size = 25x25
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		is-transparent = true
+		saved-params = ""
+		text = ""
+	elem "star10"
+		type = LABEL
+		pos = 70,70
+		size = 25x25
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		is-transparent = true
+		saved-params = ""
+		text = ""
+	elem "star11"
+		type = LABEL
+		pos = 40,70
+		size = 25x25
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		is-transparent = true
+		saved-params = ""
+		text = ""
+	elem "star8"
+		type = LABEL
+		pos = 130,70
+		size = 25x25
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		is-transparent = true
+		saved-params = ""
+		text = ""
+	elem "star9"
+		type = LABEL
+		pos = 100,70
+		size = 25x25
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		is-transparent = true
+		saved-params = ""
+		text = ""
+	elem "star7"
+		type = LABEL
+		pos = 160,70
+		size = 25x25
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		is-transparent = true
+		saved-params = ""
+		text = ""
+	elem "star6"
+		type = LABEL
+		pos = 190,70
+		size = 25x25
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		is-transparent = true
+		saved-params = ""
+		text = ""
+	elem "star5"
+		type = LABEL
+		pos = 220,70
+		size = 25x25
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		is-transparent = true
+		saved-params = ""
+		text = ""
+	elem "star4"
+		type = LABEL
+		pos = 250,70
+		size = 25x25
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		is-transparent = true
+		saved-params = ""
+		text = ""
+	elem "star3"
+		type = LABEL
+		pos = 280,70
+		size = 25x25
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		is-transparent = true
+		saved-params = ""
+		text = ""
+	elem "star2"
+		type = LABEL
+		pos = 310,70
+		size = 25x25
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		is-transparent = true
+		saved-params = ""
+		text = ""
+	elem "star1"
+		type = LABEL
+		pos = 340,70
+		size = 25x25
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		is-transparent = true
+		saved-params = ""
+		text = ""
+	elem "attribute_icon"
+		type = LABEL
+		pos = 336,24
+		size = 40x40
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		is-transparent = true
+		saved-params = ""
+		text = ""
+	elem "card_name"
+		type = LABEL
+		pos = 32,32
+		size = 280x32
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		font-style = "bold"
+		background-color = none
+		is-transparent = true
+		saved-params = ""
+		text = ""
+		align = left
+	elem "card_type"
+		type = LABEL
+		pos = 40,119
+		size = 320x30
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		font-style = "bold"
+		background-color = none
+		is-transparent = true
+		saved-params = ""
+		text = ""
+		align = top-left
+	elem "effect_text"
+		type = LABEL
+		pos = 41,151
+		size = 320x136
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		is-transparent = true
+		saved-params = ""
+		text = ""
+		align = top-left
+		text-wrap = true
+	elem "atk_label"
+		type = LABEL
+		pos = 152,305
+		size = 92x22
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		is-transparent = true
+		saved-params = ""
+		text = ""
+	elem "def_label"
+		type = LABEL
+		pos = 256,305
+		size = 88x22
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		is-transparent = true
+		saved-params = ""
+		text = ""
+
