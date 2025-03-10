@@ -115,6 +115,9 @@
     place_monster_on_zone(M, selected_zone, position)
     
     src << "You summoned [M.name] in [lowertext(position)] position!"
+    if(position == "Set")
+        view() << sound('card-set.ogg')
+        
 
 /mob/proc/place_monster_on_zone(obj/card/monster/M, obj/duel/zone/monster/Z, position = "Attack", face = "up")
     // Remove from hand
@@ -184,6 +187,7 @@
     set_spell_on_zone(S, selected_zone)
     
     src << "You set [S.name]!"
+    view() << sound('card-set.ogg')
 
 
 /mob/proc/set_spell_on_zone(obj/card/spell/S, obj/duel/zone/spell_trap/Z)
@@ -241,7 +245,7 @@
     set_spell_on_zone(T, selected_zone)
     
     src << "You set [T.name]!"
-
+    view() << sound('card-set.ogg')
 
 /mob/proc/set_trap_on_zone(obj/card/trap/T, obj/duel/zone/spell_trap/Z)
     // Remove from hand
@@ -313,3 +317,9 @@
             usr.spell_set(src)
         if("set trap")
             usr.trap_set(src)
+
+
+
+//Proc that removes a card from a list and adds it to another list, updating all necessary visual elements along the way.
+//Switch statement that takes a the card's location and sets the current list as a variable current_list. 
+//

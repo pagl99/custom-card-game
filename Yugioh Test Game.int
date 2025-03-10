@@ -2,13 +2,13 @@
 /*
 MAP_PLANE_MASTERS: 
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1741152643
+LAST_COMPILE_TIME: 1741645495
 DIR: Code YGO Assets 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
-LAST_COMPILE_VERSION: 515.1647
-WINDOW: YGO Assets\playcard.dmi;Code\zoom.dm;Code\movement.dm;Code\obj.dm;Code\mob.dm;Code\logging.dm;Code\cardzones.dm;world.dm;Code\CARD INVENTORY GRID ON SCREEN (DO NOT USE).dm;Code\card_data.dm;Code\dueling_logic.dm
-FILE: Code\dueling_logic.dm
+LAST_COMPILE_VERSION: 516.1658
+WINDOW: YGO Assets\playcard.dmi;Code\zoom.dm;Code\movement.dm;Code\obj.dm;Code\mob.dm;Code\logging.dm;Code\cardzones.dm;world.dm;Code\CARD INVENTORY GRID ON SCREEN (DO NOT USE).dm;Code\card_data.dm;Code\dueling_logic.dm;Code\cardInventoryGrid.dm
+FILE: Code\cardInventoryGrid.dm
 MAP_INSTANCE_MODE: copy
 */
 // END_INTERNALS

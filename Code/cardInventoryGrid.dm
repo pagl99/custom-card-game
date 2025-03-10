@@ -265,3 +265,22 @@ var/global/list/collection_card_objects = list()
         src << "Spawned [choice]."
     else
         src << "Failed to spawn [choice]."
+
+/client/verb/create_debug_deck()
+    set name = "Debug Deck"
+    set category = "Debug"
+    var/deck_total = 0
+    for(var/datum/yugioh_card/card in yugioh_cards)
+        if (deck_total == 40)
+            break
+        // Create the card at the user's location temporarily
+        var/obj/item/card/collection_card/new_card = create_card_object(card, usr.loc)
+        if(new_card)
+            // Move it to the collection (remove from world)
+            usr.card_collection.cards += new_card
+            new_card.loc = null
+            deck_total += 1
+    
+    // Update the view after all cards are added
+    usr.update_collection_window()
+    usr << "Added [deck_total] cards to your collection."

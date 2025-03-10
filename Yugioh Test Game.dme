@@ -41,6 +41,7 @@
 #define FILE_DIR "Icons/Icons/Plapwipe Icons/Varkarian/Male Versions"
 #define FILE_DIR "Icons/Icons/Tilesets"
 #define FILE_DIR "Icons/Icons/Turfs"
+#define FILE_DIR "SFX"
 #define FILE_DIR "YGO Assets"
 // END_FILE_DIR
 
